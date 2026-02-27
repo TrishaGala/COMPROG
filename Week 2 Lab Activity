@@ -1,0 +1,19 @@
+fullname = "Trisha Marie L. Gala"
+age = 19
+height_in_meters = 1.56
+currently_working = False     
+
+print("Fullname:", fullname)
+print(type(fullname))
+print()
+
+print("Age:", age)
+print(type(age))
+print()
+
+print("Height in meters:", height_in_meters)
+print(type(height_in_meters))
+print()
+
+print("Currently working?", currently_working)
+print(type(currently_working))
