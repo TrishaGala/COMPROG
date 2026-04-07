@@ -1,0 +1,58 @@
+# I am basing this on our week 6 PDF ma'am :)
+
+class Calculator:
+    def __init__(self):
+        self.result = 0
+    
+    def add(self, a, b):
+        self.result = a + b
+        return self.result
+    
+    def subtract(self, a, b):
+        self.result = a - b
+        return self.result
+    
+    def multiply(self, a, b):
+        self.result = a * b
+        return self.result
+    
+    def divide(self, a, b):
+        if b == 0:
+            return "Error: Cannot divide by zero"
+        self.result = a / b
+        return self.result
+    
+    def clear(self):
+        self.result = 0
+        return "Cleared"
+
+calc = Calculator()
+
+while True:
+    print("\n1.Add  2.Subtract  3.Multiply  4.Divide  5.Clear  6.Exit")
+    choice = input("Choice: ")
+    
+    if choice == "6":
+        print("Goodbye!")
+        break
+    
+    if choice == "5":
+        print(calc.clear())
+        continue
+    
+    try:
+        num1 = float(input("First number: "))
+        num2 = float(input("Second number: "))
+        
+        if choice == "1":
+            print("Result:", calc.add(num1, num2))
+        elif choice == "2":
+            print("Result:", calc.subtract(num1, num2))
+        elif choice == "3":
+            print("Result:", calc.multiply(num1, num2))
+        elif choice == "4":
+            print("Result:", calc.divide(num1, num2))
+        else:
+            print("Invalid choice")
+    except:
+        print("Please enter valid numbers")
